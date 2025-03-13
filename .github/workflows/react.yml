@@ -21,7 +21,7 @@ jobs:
       - name: Install Dependencies and Build React App
         run: |
           ssh -o StrictHostKeyChecking=no ubuntu@${{ secrets.EC2_IP }} << 'EOF'
-            cd React-GitHub-actions || exit
+            cd /home/ubuntu/my-app || exit
             git pull origin master || exit
             npm install || exit
             npm run build || exit
